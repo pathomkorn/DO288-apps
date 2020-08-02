@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: tododb
+  name: tododb
+spec:
+  externalName: mysql.ocp-na2.prod.nextcle.com
+  selector:
+    app: tododb
+  type: ExternalName
+status:
+  loadBalancer: {}
